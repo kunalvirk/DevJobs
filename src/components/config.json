@@ -1,0 +1,25 @@
+{
+    "title": "DevJobs | Jobs shared by developers for developers",
+    "titleTemplate": "%s - DevJobs",
+    "description": "Find jobs posted by developers around the world",
+    "openGraph": {
+      "title": "DevJobs | Jobs shared by developers for developers",
+      "description": "Find jobs posted by developers around the world",
+      "type": "website",
+      "url": "https://store.refine.dev/",
+      "site_name": "DevJobs",
+      "images": [
+        {
+          "url": "/social.png",
+          "width": "1240",
+          "height": "640",
+          "alt": "DevJobs"
+        }
+      ]
+    },
+    "twitter": {
+      "handle": "@nextjs",
+      "site": "@nextjs",
+      "cardType": "summary_large_image"
+    }
+  }

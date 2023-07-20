@@ -1,0 +1,48 @@
+{
+  "name": "refine-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--max_old_space_size=4096 refine dev",
+    "build": "refine build",
+    "start": "refine start",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "refine": "refine"
+  },
+  "dependencies": {
+    "@next/font": "^13.4.10",
+    "@refinedev/cli": "^2.5.1",
+    "@refinedev/core": "^4.5.8",
+    "@refinedev/inferencer": "^4.0.0",
+    "@refinedev/kbar": "^1.1.0",
+    "@refinedev/nextjs-router": "^5.1.4",
+    "@refinedev/react-hook-form": "^4.1.2",
+    "@refinedev/react-table": "^5.0.0",
+    "@refinedev/supabase": "^5.0.0",
+    "@supabase/auth-helpers-nextjs": "^0.7.3",
+    "next": "^13.0.6",
+    "next-auth": "^4.22.2",
+    "next-i18next": "^8.9.0",
+    "nookies": "^2.5.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.10.1",
+    "react-simple-toasts": "^5.4.0",
+    "react-simple-wysiwyg": "^2.2.5",
+    "react-slugify": "^3.0.2",
+    "sanitize-html": "^2.11.0",
+    "timeago-react": "^3.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^12.20.11",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/sanitize-html": "^2.9.0",
+    "@typescript-eslint/parser": "5.48.0",
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.7.4"
+  }
+}

@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html, body, #__next {
+  height: 100%;
+}
+#__next > div {
+  height: 100%;
+}
+body {
+  margin: 0px;
+  font-family: var('--font-inter');
+  --tw-gradient-from: #e0e7ff;
+  --tw-gradient-to: rgb(224 231 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+table th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+table th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (max-width: 751px) {
+  .layout {
+    display: block;
+  }
+}
+
+.layout .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.breadcrumb li a {
+  padding: 0;
+  margin-right: 10px;
+}
+.breadcrumb li {
+  margin-right: 10px;
+}
+.breadcrumb li::after {
+  content: '/';
+  display: inline-block;
+}
+.breadcrumb li:last-child {
+  margin-right: 0;
+}
+.breadcrumb li:last-child::after {
+  display: none;
+}
+.breadcrumb a {
+  color: #7e22ce;
+  text-decoration: none;
+}
+
+.menu {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-right: 1px solid lightgray;
+}
+
+.menu a {
+  color: black;
+}
+
+.menu .active {
+  font-weight: bold;
+}
+
+.job-info-pill {
+  background-color: #F3F4F6 !important;
+}
+
+.rsw-editor {
+  min-height: 300px !important;
+  font-family: 'Inter';
+}
+.rsw-editor .rsw-ce {
+  font-size: 0.875rem;
+}
+
+.rsw-editor .rsw-ce h1,
+.job-description-holder h1 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.rsw-editor .rsw-ce h2,
+.job-description-holder h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rsw-editor .rsw-ce p,
+.job-description-holder p {
+  font-size: 0.875rem;
+}
+
+.rsw-editor .rsw-ce ul,
+.job-description-holder ul {
+  list-style: disc;
+  margin: 0 0 0 20px;
+}
+.rsw-editor .rsw-ce ol,
+.job-description-holder ul {
+  list-style: decimal;
+  margin: 0 0 0 20px;
+}
+
+.jobSaved {
+  fill: red;
+  stroke: red;
+}
+
+.user-dropdown-menu.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 0.2s ease;
+}
+
+.user-dropdown-menu.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: 0.2s ease;
+}
+
+.footer-icon {width: 100px; display: inline-flex;}
+.footer-icon > svg {max-height: 30px; width: 100%;}
+.footer-icon.supabase-icon {width: 30px;}
+
+@media screen and (max-width: 751px) {
+  .menu {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.menu ul {
+  padding-left: 16px;
+}
