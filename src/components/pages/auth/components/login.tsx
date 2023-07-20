@@ -71,7 +71,7 @@ export const LoginPage: React.FC<LoginProps> = ({
                 providerName: provider.name,
               })
             }
-            className="flex justify-center items-center px-8 bg-gray-800 border-blue-400 border-solid h-11 rounded-full px-2 py-1 text-white  hover:text-blue-400 cursor-pointer transition duration-200 hover:animate-pulse"
+            className="flex justify-center items-center px-8 bg-gray-800 border-blue-400 border-solid h-11 rounded-full py-1 text-white  hover:text-blue-400 cursor-pointer transition duration-200 hover:animate-pulse"
           >
             <span className="mr-2">{provider?.icon}</span>
             {provider.label ?? <label>{provider.label}</label>}
