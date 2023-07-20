@@ -22,12 +22,11 @@ const Masthead: React.FC<{title?: string}> = ({title}) => {
           <div className={`container mx-auto pt-40 ${!title ? 'pb-28' : ''}`}>
             <div className={`entry-content font-inter ${title ? 'max-w-full text-center' : 'max-w-xl'}`}>
               <h1 className={`${title ? 'text-5xl' : 'text-6xl'} font-extrabold leading-tight mb-6`}>
-                {title ? title : "Join the best tech startups in the industry"}
+                {title ? title : "Discover the finest tech startups in the industry"}
               </h1>
 
             {!title ? <p className="text-gray-600">
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+              where developers from around the globe share remote job opportunities within their own companies.
               </p> : ''}
 
               
