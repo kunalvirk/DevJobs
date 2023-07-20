@@ -15,12 +15,12 @@ const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   const { mutate: logout } = useLogout();
 
-  let menuRef = useRef();
+  let menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let menuHandler = (e: React.MouseEvent) => {
+    let menuHandler = (e: MouseEvent) => {
       
-      if (!menuRef.current?.contains(e.target)) {
+      if (menuRef.current && !menuRef.current?.contains(e.target as Node)) {
         setOpen(false);
       }
     };
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
                   <li>
                     <div className={`user-dropdown relative flex`} ref={menuRef}>
                       <button className='user-menu inline-flex items-center' onClick={()=>{setOpen(!open)}}>
-                        <span className="overflow-hidden border-2 border-white rounded-full inline-block"><Image src={user ? profile?.avatar_url : avatar} width={30} height={30} alt="" /></span>
+                        <span className="overflow-hidden border-2 border-white rounded-full inline-block"><Image src={profile ? profile?.avatar_url : avatar.src} width={30} height={30} alt="" /></span>
                       </button>
                       <div className={`user-dropdown-menu absolute top-full mt-2 right-0 bg-white p-5 shadow-lg flex flex-wrap flex-col rounded-lg ${open? 'active' : 'inactive'}`}>
                         <div className="user-info w-60 pb-4">

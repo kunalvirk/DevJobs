@@ -19,8 +19,10 @@ export const useLoggedIn = () => {
                                             .limit(1)
                                             .eq("id", user.id);
                     
-                    setProfile(data[0]);
-                    setIsLoading(false);
+                    if (data) {
+                        setProfile(data[0]);
+                        setIsLoading(false);
+                    }
                 } catch(error) {
                     console.error('Error fetching extra info:', error);
                     setIsLoading(false);

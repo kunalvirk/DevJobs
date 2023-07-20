@@ -7,7 +7,7 @@ import { supabaseClient } from "src/utility";
 
 const Info: React.FC = () => {
   const { user, profile, isLoading, isError } = useLoggedIn();
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState<any>([]);
 
     useEffect(() => {
 
@@ -15,7 +15,9 @@ const Info: React.FC = () => {
         const getSavedJobs = async () => {
             try {
                 const { data, error } = await supabaseClient.from('saved_jobs').select('id, job_id, profile_id, jobs (*)');
-                setJobs(data);
+                if (data && data.length > 0) {
+                    setJobs(data);
+                }
             } catch(e) {
                 toast("An error occured while fetching bookmarks");
             }
@@ -34,7 +36,7 @@ const Info: React.FC = () => {
         <div className="container mx-auto">
             <div className="flex justify-center w-full">
                 <div className="job-lists-wrapper max-w-4xl w-full">
-                    {jobs && jobs.map(job => <JobRow job={job.jobs} />)}
+                    {jobs && jobs.map((job: any) => <JobRow job={job.jobs} />)}
                 </div>
             </div>
         </div>

@@ -94,7 +94,7 @@ const Job: React.FC = () => {
     const optionValue = e.target.value;
     const groupName = e.target.name;
 
-    setSelectedOptions((prevSelectedOptions) => {
+    setSelectedOptions((prevSelectedOptions: any) => {
       const isChecked = e.target.checked;
       const updatedList = { ...prevSelectedOptions };
 
